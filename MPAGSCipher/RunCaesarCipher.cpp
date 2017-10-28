@@ -16,7 +16,7 @@ std::string runCaesarCipher( const std::string& inputText, const size_t key, con
   const size_t alphabetSize = alphabet.size();
 
   // Make sure that the key is in the range 0 - 25
-  const size_t truncatedKey = key % alphabetSize;
+  const size_t truncatedKey { key % alphabetSize };
 
   // Loop over the input text
   char processedChar {'x'};
