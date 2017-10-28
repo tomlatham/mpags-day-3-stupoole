@@ -15,6 +15,9 @@ std::string runCaesarCipher( const std::string& inputText, const size_t key, con
   const std::vector<char> alphabet = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
   const size_t alphabetSize = alphabet.size();
 
+  // Make sure that the key is in the range 0 - 25
+  const size_t truncatedKey = key % alphabetSize;
+
   // Loop over the input text
   char processedChar {'x'};
   for ( const auto& origChar : inputText ) {
@@ -29,9 +32,9 @@ std::string runCaesarCipher( const std::string& inputText, const size_t key, con
 	// or decrypting) and determine the new character
 	// Can then break out of the loop over the alphabet
 	if ( encrypt ) {
-	  processedChar = alphabet[ (i + key) % alphabetSize ];
+	  processedChar = alphabet[ (i + truncatedKey) % alphabetSize ];
 	} else {
-	  processedChar = alphabet[ (i + alphabetSize - key) % alphabetSize ];
+	  processedChar = alphabet[ (i + alphabetSize - truncatedKey) % alphabetSize ];
 	}
 	break;
       }
