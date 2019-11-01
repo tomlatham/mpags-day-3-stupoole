@@ -17,7 +17,7 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 # - Use our standard set of flags
 set(CMAKE_CXX_FLAGS "-Wall -Wextra -Werror -Wfatal-errors -Wshadow -pedantic")
 
-
+# adds subdir
 add_subdirectory(MPAGSCipher)
 
 
@@ -35,3 +35,6 @@ target_include_directories(mpags-cipher
 target_compile_features(mpags-cipher
   PRIVATE cxx_auto_type cxx_range_for cxx_uniform_initialization
   )
+
+enable_testing()
+add_subdirectory(Testing)
