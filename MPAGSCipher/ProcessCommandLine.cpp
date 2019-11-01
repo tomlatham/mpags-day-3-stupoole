@@ -91,5 +91,5 @@ bool processCommandLine(const std::vector<std::string>& args, ProgramSettings& s
   }
 
 
-  return processStatus, settings;
+  return processStatus;
 }

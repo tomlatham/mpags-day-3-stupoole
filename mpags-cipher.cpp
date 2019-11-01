@@ -96,7 +96,6 @@ int main(int argc, char* argv[])
     }
   }
 
-  std::cout << "test" << std::endl;
 
   // We have the key as a string, but the Caesar cipher needs an unsigned long, so we first need to convert it
   // We default to having a key of 0, i.e. no encryption, if no key was provided on the command line
@@ -124,6 +123,7 @@ int main(int argc, char* argv[])
   }
 
   // Run the Caesar cipher (using the specified key and encrypt/decrypt flag) on the input text
+//  std::cout << settings.encrypt << std::endl;
   std::string outputText { runCaesarCipher( inputText, caesar_key, settings.encrypt ) };
 
   // Output the transliterated text
