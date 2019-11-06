@@ -1,16 +1,17 @@
 // Standard Library includes
-#include <CaesarCipher.h>
+
 #include <fstream>
 #include <iostream>
 #include <string>
 #include <vector>
 
 // Our project headers
-#include "TransformChar.hpp"
+#include "CipherMode.hpp"
 #include "ProcessCommandLine.hpp"
 #include "RunCaesarCipher.hpp"
-#include "CipherMode.h"
-  
+#include "TransformChar.hpp"
+#include "CaesarCipher.hpp"
+
 // Main function of the mpags-cipher program
 int main(int argc, char* argv[])
 {

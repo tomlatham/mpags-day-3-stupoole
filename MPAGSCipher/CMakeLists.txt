@@ -1,12 +1,12 @@
 
 add_library(MPAGSCipher STATIC
         CaesarCipher.cpp
-        CaesarCipher.h
+        CaesarCipher.hpp
         ProcessCommandLine.cpp
         ProcessCommandLine.hpp
         TransformChar.cpp
         TransformChar.hpp
-        CipherMode.h)
+        CipherMode.hpp)
 
 target_include_directories(MPAGSCipher
         PUBLIC ${CMAKE_CURRENT_LIST_DIR}

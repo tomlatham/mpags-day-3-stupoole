@@ -2,10 +2,10 @@
 // Created by stu on 01/11/2019.
 //
 
-#ifndef MPAGSCIPHER_CAESARCIPHER_H
-#define MPAGSCIPHER_CAESARCIPHER_H
+#ifndef MPAGSCIPHER_CAESARCIPHER_HPP
+#define MPAGSCIPHER_CAESARCIPHER_HPP
 
-#include "CipherMode.h"
+#include "CipherMode.hpp"
 #include <iostream>
 #include <string>
 #include <sys/param.h>
@@ -23,4 +23,4 @@ class CaesarCipher {
   std::string applyCaesar(const std::string& inputText, CipherMode cipherMode);
 };
 
-#endif // MPAGSCIPHER_CAESARCIPHER_H
+#endif // MPAGSCIPHER_CAESARCIPHER_HPP

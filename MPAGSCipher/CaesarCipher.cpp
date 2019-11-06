@@ -2,8 +2,7 @@
 // Created by stu on 01/11/2019.
 //
 
-#include "CaesarCipher.h"
-
+#include "CaesarCipher.hpp"
 
 CaesarCipher::CaesarCipher(const size_t& caeser_key) : key_ {caeser_key}
 {

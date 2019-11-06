@@ -1,10 +1,9 @@
 #ifndef MPAGSCIPHER_PROCESSCOMMANDLINE_HPP
 #define MPAGSCIPHER_PROCESSCOMMANDLINE_HPP
 
+#include "CipherMode.hpp"
 #include <string>
 #include <vector>
-#include "CipherMode.h"
-
 
 struct ProgramSettings
 {
