@@ -3,6 +3,7 @@
 //
 
 #include "CaesarCipher.hpp"
+#include <iostream>
 
 CaesarCipher::CaesarCipher(const size_t& caeser_key) : key_ {caeser_key}
 {
@@ -21,17 +22,19 @@ CaesarCipher::CaesarCipher(const std::string& caeser_key)  : key_ {0}
                   << "        the supplied key (" << caeser_key
                   << ") could not be successfully converted" << std::endl;
         isNum = false;
+	break;
       }
     }
-  }
-  if (isNum){
-    key_ = std::stoul(caeser_key);
+
+    if (isNum){
+      key_ = std::stoul(caeser_key);
+    }
   }
 }
 
 
-std::string CaesarCipher::applyCaesar(const std::string &inputText,
-  const CipherMode cipherMode) {
+std::string CaesarCipher::applyCipher(const std::string &inputText,
+  const CipherMode cipherMode) const {
 
   // Create the output string
   std::string outputText {};

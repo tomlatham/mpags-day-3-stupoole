@@ -6,21 +6,19 @@
 #define MPAGSCIPHER_CAESARCIPHER_HPP
 
 #include "CipherMode.hpp"
-#include <iostream>
 #include <string>
-#include <sys/param.h>
 #include <vector>
 
 class CaesarCipher {
   private:
-    const std::vector<char> alphabet_ = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
-    const size_t alphabetSize_ = alphabet_.size();
+    const std::vector<char> alphabet_ {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
+    const size_t alphabetSize_ { alphabet_.size() };
     size_t key_;
   public:
 
   explicit CaesarCipher(const size_t& caeser_key);
   explicit CaesarCipher(const std::string& caeser_key);
-  std::string applyCaesar(const std::string& inputText, CipherMode cipherMode);
+  std::string applyCipher(const std::string& inputText, const CipherMode cipherMode) const;
 };
 
 #endif // MPAGSCIPHER_CAESARCIPHER_HPP

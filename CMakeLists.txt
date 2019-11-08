@@ -28,13 +28,5 @@ add_executable(mpags-cipher
 
 target_link_libraries(mpags-cipher PRIVATE MPAGSCipher)
 
-target_include_directories(mpags-cipher
-  PRIVATE MPAGSCipher
-  )
-
-target_compile_features(mpags-cipher
-  PRIVATE cxx_auto_type cxx_range_for cxx_uniform_initialization
-  )
-
 enable_testing()
 add_subdirectory(Testing)

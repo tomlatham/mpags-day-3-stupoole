@@ -1,3 +1,5 @@
+// Not entirely sure why you have these pragmas (here and indeed in every test)
+// - the latter certainly causes compilation warnings for me
 #pragma clang diagnostic push
 #pragma ide diagnostic ignored "cert-err58-cpp"
 //
